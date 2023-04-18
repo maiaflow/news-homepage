@@ -1,0 +1,268 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype-variations");
+  font-weight: 100 1000;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  padding: 1rem 1rem 4rem;
+  background-color: hsl(36, 100%, 99%);
+}
+body.open {
+  overflow: hidden;
+}
+body.open nav {
+  display: flex;
+}
+body.open .menu-backdrop {
+  visibility: visible;
+}
+body.open img.menu-open {
+  display: none;
+}
+body.open img.menu-close {
+  display: block;
+}
+body header {
+  display: flex;
+  height: 52px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+body header img.logo {
+  max-height: 28px;
+  width: auto;
+}
+body header img.menu-open {
+  display: block;
+  position: relative;
+  z-index: 3;
+}
+body header img.menu-close {
+  display: none;
+  z-index: 3;
+}
+body header nav {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 66vw;
+  padding: 1rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 8rem;
+  display: none;
+  z-index: 2;
+}
+body header nav a {
+  color: hsl(240, 100%, 5%);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+body header nav a:hover {
+  color: hsl(5, 85%, 63%);
+}
+body header .menu-backdrop {
+  position: absolute;
+  inset: 0;
+  background: hsla(240, 100%, 5%, 0.5);
+  visibility: hidden;
+}
+body main {
+  display: grid;
+  gap: 4rem;
+}
+body main section.hero img {
+  width: 100%;
+}
+body main section.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: hsl(240, 100%, 5%);
+  margin: 1.333rem 0 1rem;
+}
+body main section.hero p {
+  line-height: 1.75;
+  color: hsl(236, 13%, 42%);
+  margin-bottom: 1.5rem;
+}
+body main section.hero button {
+  background: hsl(5, 85%, 63%);
+  color: hsl(36, 100%, 99%);
+  text-transform: uppercase;
+  font-size: 0.933rem;
+  letter-spacing: 4px;
+  border: 0;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+body main section.hero button:hover {
+  background: hsl(240, 100%, 5%);
+}
+body main aside {
+  background: hsl(240, 100%, 5%);
+  padding: 1.333rem;
+}
+body main aside h2 {
+  color: hsl(35, 77%, 62%);
+  font-size: 2rem;
+}
+body main aside ul li {
+  list-style: none;
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+  padding: 2rem 0 1.75rem;
+  cursor: pointer;
+}
+body main aside ul li:hover h3 {
+  color: hsl(35, 77%, 62%);
+}
+body main aside ul li h3 {
+  color: hsl(36, 100%, 99%);
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  padding-bottom: 0.5rem;
+}
+body main aside ul li p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.8;
+}
+body main aside ul li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+body main section.cards {
+  display: grid;
+  gap: 2rem;
+}
+body main section.cards figure {
+  display: flex;
+  gap: 1.3333333333rem;
+}
+body main section.cards figure div {
+  flex: 0 1 30%;
+}
+body main section.cards figure div img {
+  width: 100%;
+}
+body main section.cards figure figcaption {
+  flex: 0 1 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+body main section.cards figure figcaption:hover h4 {
+  color: hsl(5, 85%, 63%);
+}
+body main section.cards figure figcaption em {
+  color: hsl(233, 8%, 79%);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+}
+body main section.cards figure figcaption h4 {
+  color: hsl(240, 100%, 5%);
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+body main section.cards figure figcaption p {
+  color: hsl(236, 13%, 42%);
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  html {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    margin-bottom: 4rem;
+  }
+  html body {
+    max-width: 1142px;
+  }
+  html body header {
+    margin: 4rem 0 3rem;
+  }
+  html body header img.logo {
+    max-height: 40px;
+  }
+  html body header nav {
+    position: unset;
+    display: flex;
+    flex-direction: row;
+    padding: unset;
+    width: unset;
+    gap: 2.66rem;
+  }
+  html body header nav a {
+    color: hsl(236, 13%, 42%);
+    font-size: 1rem;
+    font-weight: 250;
+  }
+  html body header img.menu-open {
+    display: none;
+  }
+  html body main {
+    grid-template-areas: "hero hero sidebar" "cards cards cards";
+    row-gap: 4rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+  }
+  html body main section.hero {
+    display: grid;
+    grid-area: hero;
+    grid-template-areas: "hero-image hero-image" "title description";
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  html body main section.hero picture {
+    grid-area: hero-image;
+  }
+  html body main section.hero h1 {
+    grid-area: title;
+    font-size: 3.33rem;
+    letter-spacing: 1.5px;
+    margin: 0;
+  }
+  html body main section.hero p {
+    line-height: 1.6;
+  }
+  html body main section.hero section.description {
+    grid-area: description;
+  }
+  html body main aside {
+    grid-area: sidebar;
+    padding: 1.667rem 1.5rem 1.33rem;
+  }
+  html body main aside h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  html body main aside ul li p {
+    padding-right: 5px;
+  }
+  html body main section.cards {
+    grid-area: cards;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  html body main section.hero {
+    grid-template-areas: "hero-image hero-image" "title title" "description description";
+  }
+}/*# sourceMappingURL=styles.css.map */
