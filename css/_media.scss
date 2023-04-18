@@ -1,0 +1,100 @@
+@media (min-width: 768px) {
+    html {
+      display: grid;
+      place-content: center;
+      min-height: 100vh;
+      margin-bottom: 4rem;
+      body {
+        max-width: 1142px;
+        header {
+          margin: 4rem 0 3rem;
+          img.logo {
+            max-height: 40px;
+          }
+          nav {
+            position: unset;
+            display: flex;
+            flex-direction: row;
+            padding: unset;
+            width: unset;
+            gap: 2.66rem;
+            a {
+              color: $darkGrayishBlue;
+              font-size: 1rem;
+              font-weight: 250;
+            }
+          }
+          img.menu-open {
+            display: none;
+          }
+        }
+        main {
+          grid-template-areas:
+            "hero hero sidebar"
+            "cards cards cards";
+          row-gap: $gap;
+          -moz-column-gap: calc($gap / 2);
+          column-gap: calc($gap / 2);
+          section.hero {
+            display: grid;
+            grid-area: hero;
+            grid-template-areas:
+              "hero-image hero-image"
+              "title description";
+            gap: calc($gap / 2);
+            grid-template-columns: 1fr 1fr;
+            picture {
+              grid-area: hero-image;
+            }
+            h1 {
+              grid-area: title;
+              font-size: 3.33rem;
+              letter-spacing: 1.5px;
+              margin: 0;
+            }
+            p {
+              line-height: 1.6;
+            }
+            section.description {
+              grid-area: description;
+            }
+          }
+          aside {
+            grid-area: sidebar;
+            padding: 1.667rem 1.5rem 1.33rem;
+            h2 {
+              font-size: 2.5rem;
+              font-weight: 600;
+            }
+            ul {
+              li {
+                p {
+                  padding-right: 5px;
+                }
+              }
+            }
+          }
+          section.cards {
+            grid-area: cards;
+            grid-template-columns: 1fr 1fr 1fr;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    html {
+      body {
+        main {
+          section.hero {
+            grid-template-areas:
+              "hero-image hero-image"
+              "title title"
+              "description description";
+          }
+        }
+      }
+    }
+  }
+  
