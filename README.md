@@ -31,7 +31,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/collab-with-eric-responsive-news-page-with-mobile-menu-yLLgbRXVUf](https://www.frontendmentor.io/solutions/collab-with-eric-responsive-news-page-with-mobile-menu-yLLgbRXVUf)
 - Live Site URL: [https://maiaflow.github.io/news-homepage/](https://maiaflow.github.io/news-homepage/)
 
 ## My process
